@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Başlık ve Meta Etiketleri Altıncı Kez, "Dijital Keşif/Haritacılık" Temasıyla Özgünleştirildi -->
+    <title>Abdulkadir Güngör - Web Design & Developer | Dijital Keşif: Kod Haritaları Yaratmak</title>
+    <meta name="description" content="Abdulkadir Güngör rehberliğinde Web Tasarımı ve Geliştirme'nin keşif dolu dünyasına bir seyahat. Kodun coğrafyası, kullanıcı deneyimi rotaları, teknoloji pusulaları ve etik seyrüsefer üzerine felsefi bir harita.">
+    <meta name="keywords" content="Abdulkadir Güngör, Web Design, Web Developer, Dijital Keşif, Kod Haritacılığı, Frontend Rotaları, Backend Arazileri, Fullstack Keşif Gezisi, JavaScript Pusulası, HTML İşaretleri, CSS Manzaraları, Teknoloji Seyrüseferi, Deneyim Haritalama, Duyarlı Keşif, Mobil Rotalar, CV Keşif Günlüğü, Özgeçmiş Koordinatları, Github Harita Arşivi, Linkedin Kaşif Ağı, Kod Etiği, Sorumlu Kaşiflik, Kullanıcı Odaklı Navigasyon, Siber Güvenlik Sınırları">
+    <meta name="author" content="Abdulkadir Güngör">
+
+    <style>
+        /* Genel Resetleme ve Temel Ayarlar */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px; /* Responsive font boyutu için temel */
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden; /* Yatay kaydırmayı engelle */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Konteyner */
+        .container {
+            width: 90%;
+            max-width: 1100px; /* İçeriğin okunabilir genişliği */
+            margin: 0 auto;
+            padding: 2rem 1rem; /* Üst/alt ve yan boşluklar */
+        }
+
+        /* Ana İçerik Alanı */
+        main {
+            flex-grow: 1; /* Footer'ı sayfanın altına itmek için */
+        }
+
+        /* Başlıklar */
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem); /* Responsive başlık boyutu */
+            text-align: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            color: #0056b3;
+        }
+
+        h2 {
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            margin-top: 2.5rem;
+            color: #2c3e50;
+            border-left: 4px solid #007bff;
+            padding-left: 0.8rem;
+        }
+
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-top: 2rem;
+            color: #34495e;
+        }
+
+        /* Paragraflar */
+        p {
+            margin-bottom: 1.2rem;
+            font-size: clamp(1rem, 2.5vw, 1.1rem); /* Responsive metin boyutu */
+            text-align: justify;
+        }
+
+        /* Bağlantılar */
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        a:hover, a:focus {
+            color: #0056b3;
+            text-decoration: underline;
+            outline: 2px solid transparent; /* Odaklanma stilini belirginleştir */
+            outline-offset: 2px;
+        }
+
+        /* Kod Blokları (Örnek) */
+        pre {
+            background-color: #2d2d2d;
+            color: #f0f0f0;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto; /* Uzun kod satırları için kaydırma */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            margin: 1.5rem 0;
+            white-space: pre-wrap; /* Satırları sar */
+            word-wrap: break-word; /* Kelimeleri böl */
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #e9ecef;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            border-radius: 0;
+            font-size: inherit; /* Pre içindeki code için boyut ayarı */
+        }
+
+        /* Listeler */
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Alıntılar */
+        blockquote {
+            border-left: 5px solid #007bff;
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            background-color: #e9ecef;
+            font-style: italic;
+            color: #555;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+        }
+
+        /* Resimler (Eğer eklenirse) */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ayırıcı Çizgi */
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0));
+            margin: 3rem 0;
+        }
+
+        /* Footer */
+        .site-footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem; /* Bağlantılar arası boşluk */
+        }
+
+        .footer-links li {
+            margin-bottom: 0; /* Liste elemanlarının alt boşluğunu kaldır */
+        }
+
+        .footer-links a {
+            color: #ecf0f1;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover, .footer-links a:focus {
+            color: #bdc3c7;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #bdc3c7;
+            margin-top: 1rem;
+        }
+
+        /* Responsive Tasarım Ayarlamaları */
+
+        /* Tabletler ve Küçük Masaüstleri (768px ve üzeri) */
+        @media (min-width: 768px) {
+            .container {
+                width: 85%;
+                padding: 2.5rem 1.5rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Büyük Masaüstleri (1024px ve üzeri) */
+        @media (min-width: 1024px) {
+            .container {
+                width: 80%;
+                /* max-width: 1100px; */ /* Zaten yukarıda tanımlı */
+            }
+            /* Belki font boyutunu biraz daha ayarlayabiliriz */
+        }
+
+        /* Erişilebilirlik İyileştirmeleri */
+        *:focus {
+            outline: 3px dashed #0056b3;
+            outline-offset: 2px;
+        }
+        /* Odaklanma stillerini sadece klavye ile gezinildiğinde göstermek için (opsiyonel) */
+        body:not(.user-is-tabbing) *:focus {
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <!-- Başlık Aynı Kalıyor -->
+            <h1>Abdulkadir Güngör - Web Design & Developer</h1>
+        </header>
+
+        <main>
+            <!-- İçerik Altıncı Kez, "Dijital Keşif / Haritacılık" Temasıyla Yeniden Yazıldı -->
+            <section id="giris-altinci">
+                <h2>Keşif Başlangıcı: Bilinmeyen Dijital Topraklara Yolculuk</h2>
+                <p>
+                    Web tasarımı ve geliştirmesi, bilinmeyen bir kıtayı keşfetmeye ve haritasını çıkarmaya benzer. Her proje, yeni bir arazi, keşfedilmeyi bekleyen vadiler (kullanıcı ihtiyaçları) ve aşılması gereken dağlar (teknik zorluklar) sunar. Bu yolculukta geliştirici, hem cesur bir kaşif hem de titiz bir haritacıdır. Ben, <strong>Abdulkadir Güngör</strong>, bu dijital keşif gezilerinde, sadece hedefe ulaşmayı değil, aynı zamanda yolculuğun kendisini anlamlı kılmayı, güvenli rotalar çizmeyi ve keşfedilen toprakları (dijital ürünleri) başkalarının da kullanabileceği şekilde haritalandırmayı amaçlıyorum. Bu metin, bir <strong>Web Design & Developer</strong> olarak benim gözümden, kodun pusulasına, kullanıcı deneyiminin rotalarına ve bu keşif sürecinin felsefi derinliklerine bir bakıştır. Web, sürekli yeni adaların keşfedildiği ve haritaların güncellendiği dinamik bir arşipeldir.
+                </p>
+                <p>
+                    Her keşif, bir amaçla başlar: yeni bir ticaret yolu bulmak (bir iş problemini çözmek), bilinmeyen bir kültürü tanımak (yeni bir fikir sunmak) veya sadece merak duygusuyla yola çıkmak (teknolojik bir yeniliği denemek). Kaşif (geliştirici), elindeki araçları (teknolojileri) kullanarak, araziyi (proje gereksinimlerini) analiz eder ve en uygun rotayı (çözüm yolunu) belirler. Bu, sadece teknik beceri değil, aynı zamanda öngörü, adaptasyon yeteneği ve bilinmeyene karşı cesaret gerektirir. Kendi keşif günlüklerimi ve haritalarımı <a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör</a> ana kampımda ve farklı keşiflerimin kayıtlarını tuttuğum <a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör - Kişisel Web Site</a> arşivimde paylaşıyorum.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="kod-pusulasi">
+                <h2>Kodun Pusulası: Yapısal Yönler ve Güvenilir Rotalar</h2>
+                <p>
+                    Kodlama, keşif gezisinin rotasını belirleyen haritayı çizmektir. Yazılan her satır, haritadaki bir işaret, bir yönlendirme veya bir yükseklik çizgisidir. İyi çizilmiş bir harita (kod), sadece doğru yolu göstermekle kalmaz, aynı zamanda okunabilir, anlaşılır ve diğer kaşifler (geliştiriciler) tarafından da güvenle kullanılabilir olmalıdır. Kodun yapısal bütünlüğü, kullanılan işaretlerin (isimlendirme) tutarlılığı ve rotanın (mantıksal akışın) netliği, haritanın sadece doğru değil, aynı zamanda kullanışlı ve güvenilir olmasını sağlar.
+                </p>
+                <p>
+                    Haritanın netliği, gereksiz detaylardan arındırılmış olması, önemli noktaların (fonksiyonların, modüllerin) belirgin olması ve genel arazinin (proje yapısının) kolayca anlaşılabilmesi anlamına gelir. Standartlaştırılmış semboller (kodlama standartları), modüler bölgeler (bileşenler) ve açıklayıcı notlar (yorumlar), haritanın okunabilirliğini artırır ve gelecekteki keşifleri (bakım ve güncellemeleri) kolaylaştırır. Bu içsel düzen, yolcunun (kullanıcının) deneyimlediği seyahatin (uygulama performansının) hızını, güvenliğini ve konforunu doğrudan etkiler. Güvenilir bir harita, sorunsuz bir yolculuğun temelidir. Kendi haritalama tekniklerimi ve çizdiğim rotaları <a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github Yazılım</a> harita depomda sergiliyorum. Rotaların güvenliği ve tehlikeli arazilerden (güvenlik açıklarından) kaçınma stratejilerim ise <a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github CyberSecurity</a> sayfasında belgelenmiştir.
+                </p>
+                <blockquote>
+                    "Bir harita, sadece bir bölgenin temsili değil, aynı zamanda bir niyetin ve bir yolculuğun ifadesidir." – (Uyarlanmış düşünce) (Kod da sadece talimatlar değil, bir çözümün ve bir amacın haritasıdır.)
+                </blockquote>
+                <p>
+                    Çizdiğimiz haritalar, sadece makineler için değil, aynı zamanda bizimle aynı keşif gezisinde olan veya bizden sonra bu rotayı kullanacak diğer kaşifler içindir. Bu nedenle, kodun açıklığı ve mantıksal tutarlılığı, sadece teknik bir zorunluluk değil, aynı zamanda bilgi paylaşımının ve kolektif keşfin temelidir.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="deneyim-haritasi">
+                <h2>Deneyim Haritası: Kullanıcı Yolculuğunu Rehberlikle Çizmek</h2>
+                <p>
+                    Bir web sitesi veya uygulama, kullanıcının dijital arazide yaptığı bir yolculuktur. Bu yolculuğun başarılı ve keyifli olması, sadece varış noktasına ulaşmakla değil, aynı zamanda yol boyunca karşılaşılan manzaralarla (arayüz), kullanılan patikaların (etkileşimlerin) rahatlığıyla ve sağlanan rehberlikle (kullanıcı deneyimi) ilgilidir. <strong>Abdulkadir Güngör</strong> olarak hedefim, bu "deneyim haritasını" kullanıcıyı merkeze alarak çizmek; teknolojinin karmaşık arazisini herkes için anlaşılır, kolay ve keyifli bir yolculuğa dönüştürmektir.
+                </p>
+                <p>
+                    Kullanıcı Deneyimi (UX) tasarımı, bu haritayı çizmeden önceki keşif ve analiz sürecidir; yolcunun kim olduğunu, nereye gitmek istediğini, hangi araçlara sahip olduğunu ve yolda hangi engellerle karşılaşabileceğini anlamayı içerir. Kullanıcı Arayüzü (UI) tasarımı ise haritanın kendisidir; işaretler (butonlar, ikonlar), yollar (menüler, navigasyon), dinlenme noktaları (görsel öğeler) ve bilgilendirme panoları (metinler, geri bildirimler) aracılığıyla yolcuya rehberlik eder ve yolculuğu estetik olarak zenginleştirir. İyi çizilmiş bir deneyim haritası, yolcunun kaybolmadan, yorulmadan ve keyifle hedefine ulaşmasını sağlar. Bu haritaları oluşturma konusundaki tecrübelerimi ve yöntemlerimi <a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör - Özgeçmiş CV</a> keşif günlüğümde bulabilirsiniz.
+                </p>
+                <p>
+                    Bu haritanın farklı arazi koşullarında (cihazlarda) da geçerli ve kullanışlı olması gerekir. Responsive (duyarlı) tasarım, haritanın farklı ölçeklere ve koşullara uyum sağlama yeteneğidir. Haritanın (içeriğin ve işlevselliğin), yolcunun kullandığı araca (masaüstü, tablet, mobil) göre dinamik olarak yeniden düzenlenmesi, yolculuğun her koşulda sorunsuz devam etmesini sağlar. Bu, katı rotalar yerine, alternatif patikalar sunan, esnek ve uyarlanabilir haritalar çizmeyi gerektirir. Tıpkı bir kaşifin farklı hava koşullarına hazırlıklı olması gibi, iyi bir web deneyimi de farklı ekranlarda kullanıcıya hizmet etmelidir. Bu, hem teknik haritacılık becerisi hem de her yolcuya en iyi rotayı sunma anlayışıdır.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="kasifin-sezgisi">
+                <h2>Kaşifin Sezgisi: Teknoloji Pusulası ve Yaratıcı Rotalar</h2>
+                <p>
+                    Web geliştirme, hem bilinen haritaları takip etmeyi hem de yeni yollar keşfetmek için sezgilerine güvenmeyi gerektiren bir keşif yolculuğudur. Teknoloji (programlama dilleri, araçlar, platformlar) bize bir pusula ve temel haritalar sunar, ancak gerçek keşifler genellikle beklenmedik patikaları denemekle, farklı araçları birleştirmekle ve araziyi yaratıcı bir şekilde okumakla yapılır. Bir <strong>Web Design & Developer</strong> olarak kaşifin rolü, sadece pusulayı okumak değil, aynı zamanda rüzgarın yönünü hissetmek, yıldızlara bakmak ve bazen de en kestirme veya en manzaralı yolu bulmak için sezgilerini kullanmaktır. Yaratıcılık burada sadece yeni yerler bulmak değil, aynı zamanda bilinen yerlere farklı yollardan ulaşmak veya mevcut araçlarla yeni şeyler inşa etmektir.
+                </p>
+                <p>
+                    Her teknoloji aracı (pusula, sekstant, dürbün gibi) belirli bir amaca hizmet eder ve kendine özgü kullanım incelikleri vardır. Bir aracı ustaca kullanmak, sadece nasıl çalıştığını bilmek değil, aynı zamanda ne zaman ve hangi koşulda en doğru bilgiyi verdiğini, sınırlılıklarını ve diğer araçlarla nasıl birleştirilebileceğini anlamaktır. Tecrübeli bir kaşif, tek bir araca bağımlı kalmaz, duruma göre en uygun araç kombinasyonunu seçer ve hatta bazen kendi araçlarını geliştirir. Bu, sürekli arazi çalışması (deneyim) ve harita okuma (teori öğrenme) pratiği gerektirir.
+                </p>
+                <p>
+                    Bu süreç, kaşifin analitik becerileri (harita okuma, hesaplama) ile sezgisel yeteneklerinin (araziyi hissetme, tehlikeyi sezme) birleşimidir. En başarılı keşifler, bu iki yeteneğin dengeli kullanıldığı yolculuklardır; teknoloji, kaşifin vizyonunu gerçekleştirmesi için bir araçtır, ancak vizyonun kendisi insani sezgi ve yaratıcılıktan beslenir. Bu keşif süreçleri ve diğer kaşiflerle (geliştiricilerle) bilgi alışverişi yaptığım platformlardan biri <a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Linkedin</a> ağıdır. Tecrübe paylaşımı, tüm kaşiflerin daha güvenli ve verimli yolculuklar yapmasını sağlar.
+                </p>
+                 <p>
+                    Dijital dünyanın haritası sürekli yeniden çiziliyor; yeni kıtalar (yapay zeka, Web3) keşfediliyor, yeni ulaşım yolları (yeni protokoller) inşa ediliyor. Bu durum, kaşifin sürekli yeni haritalar öğrenmesini ve seyahat yöntemlerini güncellemesini gerektiriyor. Gelecekte kaşifin rolü, belki daha az manuel rota çizmek, daha çok otomatik haritalama sistemlerini yönetmek, keşif gezilerinin etik sonuçlarını değerlendirmek ve bilinmeyene doğru stratejik kararlar almak olabilir. Ancak temel kaşiflik ruhu – merak, cesaret, problem çözme ve keşfetme arzusu – her zaman baki kalacaktır.
+                </p>
+            </section>
+
+            <hr>
+
+             <section id="etik-rotalar">
+                <h2>Etik Rotalar: Sorumlu Keşif ve Güvenli Seyrüsefer</h2>
+                <p>
+                    Dijital dünyayı keşfederken ve haritalarını çizerken, sadece yeni topraklar bulmakla kalmayız, aynı zamanda bu toprakların yerlileri (kullanıcılar) ve ekosistemi üzerinde bir etki bırakırız. Bu nedenle, sorumlu bir kaşif olarak etik ilkeleri bir pusula gibi kullanarak hareket etmek, sadece doğru yolu bulmak değil, aynı zamanda geçtiğimiz yerlere zarar vermemek ve güvenli bir seyrüsefer sağlamaktır. Bir <strong>Web Design & Developer</strong> olarak, bu etik pusulayı her keşif gezisinin merkezine koymak, sadece profesyonel bir standart değil, aynı zamanda insani bir sorumluluktur.
+                </p>
+                <p>
+                    Kullanıcıların kişisel alanlarına (verilerine) saygı göstermek ve bu alanların güvenliğini sağlamak, sorumlu seyrüseferin temel kuralıdır. Hangi bilgilerin neden toplandığını şeffafça belirtmek, izin almak ve bu değerli "hazineleri" (verileri) kötü niyetli korsanlara (saldırganlara) karşı korumak esastır. Güvenlik açıkları, haritadaki tehlikeli resifler gibidir ve yolcular için ciddi riskler oluşturur. Güvenli rotalar çizmek ve savunma sistemlerini güçlendirmek (<a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör Github CyberSecurity</a>), bu etik seyrüseferi sağlamanın teknik yönüdür. Güvenlik, varış noktasına ulaştıktan sonra düşünülecek bir detay değil, yolculuğun başından itibaren planlanması gereken bir stratejidir.
+                </p>
+                <p>
+                    Keşfedilen toprakların (dijital ürünlerin) herkes tarafından erişilebilir olması, etik haritacılığın bir diğer önemli ilkesidir. Çizdiğimiz haritaların ve oluşturduğumuz rotaların, tüm potansiyel yolcular tarafından, fiziksel veya bilişsel yetenekleri ne olursa olsun, kolayca kullanılabilir olmasını sağlamalıyız. Erişilebilirlik standartlarına uymak, sadece belirli kuralları izlemek değil, aynı zamanda farklı ihtiyaçlara sahip yolcuları anlayan ve onlara uygun geçitler sunan kapsayıcı bir haritacılık anlayışıdır. Erişilebilir bir harita, daha fazla insanın keşfe katılmasına olanak tanır.
+                </p>
+                 <p>
+                    Son olarak, çizdiğimiz haritaların ve belirlediğimiz rotaların potansiyel yanlılıklar içerebileceğinin farkında olmalıyız. Kaşifin kendi kültürel bagajı veya eksik bilgisi, haritaya yanlış yansıyabilir ve bazı gruplar için dezavantajlı yollar oluşturabilir. Bu nedenle, farklı perspektifleri dikkate almak, çeşitli ekiplerle çalışmak ve rotalarımızın farklı yolcular üzerindeki etkisini sürekli sorgulamak gerekir. Etik keşif, sürekli bir öz-farkındalık, rota düzeltme ve daha adil haritalar çizme çabasıdır.
+                </p>
+            </section>
+
+            <hr>
+
+            <section id="bilinmeyen-kitalar">
+                <h2>Bilinmeyen Kıtalar: Web'in Geleceği ve Bitmeyen Keşif Arzusu</h2>
+                <p>
+                    Dijital dünyanın haritası hiçbir zaman tamamlanmayacak. Sürekli yeni teknolojiler (bilinmeyen kıtalar) keşfediliyor, mevcut topraklar (web standartları) değişiyor ve seyahat yöntemleri (geliştirme pratikleri) evriliyor. Yapay zekanın haritacılığa entegrasyonu, merkezi olmayan keşif platformları (Web3), sanal dünyalarda yeni rotalar (VR/AR), web'in gelecekteki coğrafyasını şekillendiren heyecan verici gelişmelerden sadece birkaçı. Bu dinamik yapı, bir kaşif (geliştirici) için sürekli yeni maceralar ve öğrenme fırsatları sunuyor.
+                </p>
+                <p>
+                    Bu sürekli değişen coğrafyada yolunu bulmak, sadece yeni haritaları okumayı öğrenmek değil, aynı zamanda temel seyrüsefer prensiplerine (mantık, problem çözme, kullanıcı odaklılık, estetik) hakim olmayı gerektirir. Merak, adaptasyon kabiliyeti ve keşfetme arzusu, bu yolculukta en güvenilir pusulalardır. Web geliştirme, belirli bir rotaya veya araca saplanıp kalmak değil, haritanın genel dilini anlamak ve yeni keşifleri bu dil aracılığıyla yapabilmektir.
+                </p>
+                <p>
+                    <strong>Abdulkadir Güngör</strong> olarak benim nihai gayem, bu dijital keşif sanatını kullanarak, teknoloji aracılığıyla insanların yeni ufuklar keşfetmesine yardımcı olan, anlamlı yolculuklar sunan ve keşfin heyecanını yaşatan haritalar ve rotalar yaratmaktır. Bu keşif tutkumun yansımalarını <a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">kişisel web sitemdeki</a> seyahat notlarımda, <a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">alternatif kişisel sitemdeki</a> keşif raporlarında, <a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">özgeçmişimdeki</a> keşif geçmişimde, <a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Github'daki harita arşivimde</a>, <a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">güvenlik odaklı rota planlarımda</a> ve <a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">diğer kaşiflerle</a> olan bağlantılarımda görebilirsiniz. Gelecek hangi bilinmeyen kıtaları önümüze çıkarırsa çıkarsın, keşfetme arzusu ve daha iyi bir dijital dünya haritası çizme isteği, bu bitmeyen yolculuğun itici gücü olacaktır.
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer ve Script Bölümü Değiştirilmedi -->
+    <footer class="site-footer">
+        <div class="container">
+            <ul class="footer-links">
+                <li><a href="https://abdulkadirgungor.com" target="_blank" rel="noopener noreferrer">Abdulkadir Güngör</a></li>
+                <li><a href="https://abdulkadirgungor86.github.io/" target="_blank" rel="noopener noreferrer">Kişisel Web Site</a></li>
+                <li><a href="https://abdulkadirgungor86.github.io/cv" target="_blank" rel="noopener noreferrer">Özgeçmiş CV</a></li>
+                <li><a href="https://github.com/abdulkadirgungor86" target="_blank" rel="noopener noreferrer">Github Yazılım</a></li>
+                <li><a href="https://github.com/abdulkadir-gungor" target="_blank" rel="noopener noreferrer">Github CyberSecurity</a></li>
+                <li><a href="https://www.linkedin.com/in/abdulkadir-güngör" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+            </ul>
+            <p class="copyright">© <span id="current-year"></span> Abdulkadir Güngör. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basit bir script: Copyright yılı otomatik olarak güncellenir.
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Klavye ile gezinme tespiti (Erişilebilirlik için)
+        function handleFirstTab(e) {
+            if (e.key === 'Tab') { // 'Tab' tuşuna ilk basıldığında
+                document.body.classList.add('user-is-tabbing');
+                window.removeEventListener('keydown', handleFirstTab);
+                window.addEventListener('mousedown', handleMouseDownOnce); // Fare tıklamasını dinle
+            }
+        }
+
+        function handleMouseDownOnce() {
+            document.body.classList.remove('user-is-tabbing');
+            window.removeEventListener('mousedown', handleMouseDownOnce);
+            window.addEventListener('keydown', handleFirstTab); // Tekrar Tab dinlemeye başla
+        }
+
+        window.addEventListener('keydown', handleFirstTab);
+
+        console.log("Abdulkadir Güngör - Web Design & Developer sayfası (altıncı benzersiz içerik - Dijital Keşif) başarıyla yüklendi.");
+        // Buraya daha fazla JavaScript kodu eklenebilir (örn. animasyonlar, interaktif öğeler vb.)
+    </script>
+
+</body>
+</html>
